@@ -1,0 +1,77 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "../vendor/shadcn-tailwind-4.13.0.css";
+
+@theme inline {
+  --color-paper: #f5f2ed;
+  --color-ink: #292721;
+  --color-muted: #79766f;
+  --color-line: #d9d5cd;
+  --color-olive: #777766;
+  --color-plum: #4c4052;
+  --font-display: Georgia, "Times New Roman", serif;
+  --font-sans: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1rem;
+}
+
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: #d9cdda;
+  color: #292721;
+}
+
+.eyebrow {
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.nav-link {
+  font-size: 0.75rem;
+  transition: opacity 160ms ease;
+}
+
+.nav-link:hover {
+  opacity: 0.65;
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  border-bottom: 1px solid #aaa69d;
+  padding-bottom: 0.55rem;
+  font-size: 0.7rem;
+  transition: opacity 160ms ease;
+}
+
+.text-link:hover {
+  opacity: 0.65;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
