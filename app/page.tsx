@@ -52,9 +52,14 @@ function Brand() {
       className="inline-flex items-center gap-3"
       href="#hjem"
     >
-      <span className="grid size-10 place-items-center rounded-full border border-plum/35 font-display text-lg text-plum">
-        WW
-      </span>
+      <Image
+        alt=""
+        aria-hidden="true"
+        className="size-12 rounded-full"
+        height={48}
+        src="/images/ww-interior-logo.svg"
+        width={48}
+      />
       <span className="text-[10px] font-medium tracking-[0.24em] text-ink">
         WW INTERIOR
       </span>
