@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" role="img" aria-labelledby="title desc">
+  <title id="title">WW Interior</title>
+  <desc id="desc">Ivory WW Interior monogram and botanical branch on a muted sage background.</desc>
+  <defs>
+    <path id="top-arc" d="M 270 430 A 285 285 0 0 1 730 430"/>
+    <path id="left-arc" d="M 390 835 C 260 760 210 610 270 430"/>
+  </defs>
+  <rect width="1000" height="1000" fill="#a2a38e"/>
+  <g fill="#f5f1e8" font-family="Georgia, 'Times New Roman', serif">
+    <text text-anchor="middle" font-size="43" letter-spacing="8"><textPath href="#top-arc" startOffset="50%">WW INTERIOR</textPath></text>
+    <text font-size="36" letter-spacing="7"><textPath href="#left-arc" startOffset="3%">WENCHE WIE</textPath></text>
+    <text x="440" y="610" text-anchor="middle" font-size="225" letter-spacing="-25">W</text>
+    <text x="555" y="692" text-anchor="middle" font-size="225" letter-spacing="-25">W</text>
+  </g>
+  <g fill="none" stroke="#f5f1e8" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M595 842 C644 784 688 719 716 641 C733 591 744 541 741 486"/>
+    <path d="M630 796 C597 778 573 751 562 720 C596 729 622 755 630 796Z"/>
+    <path d="M657 751 C691 736 719 710 734 679 C700 684 673 710 657 751Z"/>
+    <path d="M678 704 C649 685 628 659 620 627 C651 640 672 665 678 704Z"/>
+    <path d="M702 653 C730 632 749 604 757 575 C728 587 707 613 702 653Z"/>
+    <path d="M721 600 C697 580 681 553 680 523 C704 540 719 567 721 600Z"/>
+    <path d="M736 550 C759 529 773 503 775 476 C753 493 739 519 736 550Z"/>
+    <path d="M604 830 C576 814 549 811 524 817 C544 838 573 845 604 830Z"/>
+    <path d="M690 716 C666 731 649 751 642 776"/>
+    <path d="M720 642 C697 659 681 680 675 704"/>
+    <path d="M735 574 C715 591 702 611 697 634"/>
+  </g>
+</svg>
