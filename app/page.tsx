@@ -57,7 +57,7 @@ function Brand() {
         aria-hidden="true"
         className="size-12 rounded-full"
         height={48}
-        src="/images/ww-interior-logo.svg"
+        src="/images/ww-interior-logo-round.svg"
         width={48}
       />
       <span className="text-[10px] font-medium tracking-[0.24em] text-ink">
