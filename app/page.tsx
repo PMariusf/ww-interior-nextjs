@@ -57,7 +57,7 @@ function Brand() {
         aria-hidden="true"
         className="size-12 rounded-full"
         height={48}
-        src="/images/ww-interior-logo-round.svg"
+        src="/images/logo-black.png"
         width={48}
       />
       <span className="text-[10px] font-medium tracking-[0.24em] text-ink">
@@ -164,7 +164,7 @@ export default function Home() {
           className="mx-auto h-auto w-full max-w-[480px]"
           height={1000}
           sizes="(max-width: 640px) 88vw, 480px"
-          src="/images/ww-interior-brand-section.svg"
+          src="/images/logo-hero-brown.png"
           width={1000}
         />
       </section>
