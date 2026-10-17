@@ -4,25 +4,22 @@ const services = [
   {
     title: "Møbelfornying",
     description: "Ta vare på det du er glad i, og gi det et nytt uttrykk.",
-    image:
-      "https://images.unsplash.com/photo-1538688423619-a81d3f23454b?auto=format&fit=crop&w=1200&q=85",
-    alt: "Vintage møbler og interiør i varme, naturlige toner",
+    image: "/images/mobelstoff-gjenbruk.jpg",
+    alt: "Nærbilde av møbelstoff i varme, gjenbrukte tekstiler",
     position: "object-center",
   },
   {
     title: "Interiørdesign og styling",
     description: "Personlige rom med omtanke for helheten og de små detaljene.",
-    image:
-      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85",
-    alt: "Stemningsbilde av en lys stue med naturlige materialer",
+    image: "/images/hytte-styling.jpg",
+    alt: "Hytteinteriør stylet med lanterne, treverk og tekstiler",
     position: "object-center",
   },
   {
     title: "Interiørsøm",
     description: "Tekstiler tilpasset rommet, fargene og livet som leves der.",
-    image:
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=85",
-    alt: "Myke tekstiler og dempede farger i et soverom",
+    image: "/images/sengegavl-puter.jpg",
+    alt: "Sengegavl med håndplukkede puter i dempede tekstiler",
     position: "object-center",
   },
 ];
@@ -110,12 +107,12 @@ export default function Home() {
 
       <section className="relative isolate flex min-h-[650px] items-center px-7 py-24 sm:px-12 lg:min-h-[min(760px,calc(100svh-82px))] lg:px-[11vw]">
         <Image
-          alt="Stemningsbilde av en varm stue med naturlige materialer"
+          alt="Hytteinteriør med blå seng og spesialbygde skuffer"
           className="-z-20 object-cover object-center"
           fill
           priority
           sizes="100vw"
-          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2200&q=90"
+          src="/images/hytte-soverom.jpg"
         />
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#241d28]/75 via-[#241d28]/40 to-[#241d28]/5" />
         <div className="max-w-2xl text-white">
