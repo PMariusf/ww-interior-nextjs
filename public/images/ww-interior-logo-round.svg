@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" role="img" aria-labelledby="title desc">
+  <title id="title">WW Interior — Wenche Wie</title>
+  <desc id="desc">Round plum WW Interior emblem with curved lettering and a delicate botanical branch.</desc>
+  <defs>
+    <path id="top-arc" d="M 285 485 A 290 290 0 0 1 715 485"/>
+    <path id="left-arc" d="M 430 835 C 287 780 220 645 245 490"/>
+  </defs>
+  <circle cx="500" cy="500" r="484" fill="#292737"/>
+  <circle cx="500" cy="500" r="474" fill="none" stroke="#484554" stroke-width="7" opacity=".45"/>
+  <g fill="#f4f0e8" font-family="Georgia, 'Times New Roman', serif">
+    <text text-anchor="middle" font-size="43" letter-spacing="8"><textPath href="#top-arc" startOffset="50%">WW INTERIOR</textPath></text>
+    <text font-size="35" letter-spacing="7"><textPath href="#left-arc" startOffset="3%">WENCHE WIE</textPath></text>
+    <text x="438" y="600" text-anchor="middle" font-size="218" letter-spacing="-26">W</text>
+    <text x="556" y="684" text-anchor="middle" font-size="218" letter-spacing="-26">W</text>
+  </g>
+  <g fill="none" stroke="#f4f0e8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".96">
+    <path d="M595 842 C644 784 688 719 716 641 C733 591 744 541 741 486"/>
+    <path d="M630 796 C597 778 573 751 562 720 C596 729 622 755 630 796Z"/>
+    <path d="M657 751 C691 736 719 710 734 679 C700 684 673 710 657 751Z"/>
+    <path d="M678 704 C649 685 628 659 620 627 C651 640 672 665 678 704Z"/>
+    <path d="M702 653 C730 632 749 604 757 575 C728 587 707 613 702 653Z"/>
+    <path d="M721 600 C697 580 681 553 680 523 C704 540 719 567 721 600Z"/>
+    <path d="M736 550 C759 529 773 503 775 476 C753 493 739 519 736 550Z"/>
+    <path d="M604 830 C576 814 549 811 524 817 C544 838 573 845 604 830Z"/>
+    <path d="M690 716 C666 731 649 751 642 776"/>
+    <path d="M720 642 C697 659 681 680 675 704"/>
+    <path d="M735 574 C715 591 702 611 697 634"/>
+  </g>
+</svg>
