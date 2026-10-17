@@ -1,31 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" role="img" aria-labelledby="title desc">
   <title id="title">WW Interior — Wenche Wie</title>
-  <desc id="desc">Round plum logo with an overlapping WW monogram and a botanical branch.</desc>
+  <desc id="desc">WW Interior monogram with curved lettering and a botanical branch.</desc>
   <defs>
-    <path id="top-arc" d="M 190 500 A 310 310 0 0 1 810 500"/>
-    <path id="bottom-arc" d="M 190 500 A 310 310 0 0 0 810 500"/>
+    <path id="top-arc" d="M 260 430 A 280 280 0 0 1 740 430"/>
+    <path id="left-arc" d="M 360 825 C 238 720 205 572 285 405"/>
     <style>
-      .ring-text { fill: #f4f0e8; font-family: Georgia, 'Times New Roman', serif; font-size: 39px; letter-spacing: 8px; }
-      .brand { fill: #f4f0e8; font-family: Georgia, 'Times New Roman', serif; }
-      .botanical { fill: none; stroke: #f4f0e8; stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; opacity: .92; }
+      .ring-text { fill: #4c4052; font-family: Georgia, 'Times New Roman', serif; font-size: 42px; letter-spacing: 8px; }
+      .brand { fill: #4c4052; font-family: Georgia, 'Times New Roman', serif; }
+      .botanical { fill: none; stroke: #4c4052; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
     </style>
   </defs>
-  <circle cx="500" cy="500" r="485" fill="#292737"/>
-  <circle cx="500" cy="500" r="472" fill="none" stroke="#aaa4a0" stroke-width="1.5" opacity=".42"/>
   <text class="ring-text" text-anchor="middle"><textPath href="#top-arc" startOffset="50%">WW INTERIOR</textPath></text>
-  <text class="ring-text" text-anchor="middle" font-size="34" letter-spacing="7" transform="rotate(180 500 500)"><textPath href="#bottom-arc" startOffset="50%">WENCHE WIE</textPath></text>
+  <text class="ring-text" font-size="36" letter-spacing="7"><textPath href="#left-arc" startOffset="5%">WENCHE WIE</textPath></text>
   <g class="brand" text-anchor="middle">
-    <text x="475" y="620" font-size="205" font-weight="400" letter-spacing="-22">W</text>
-    <text x="565" y="685" font-size="205" font-weight="400" letter-spacing="-22">W</text>
+    <text x="435" y="610" font-size="235" font-weight="400" letter-spacing="-26">W</text>
+    <text x="545" y="690" font-size="235" font-weight="400" letter-spacing="-26">W</text>
   </g>
   <g class="botanical">
-    <path d="M585 795 C626 738 666 682 690 615 C705 573 714 526 715 478"/>
-    <path d="M617 746 C587 730 566 705 554 677 C585 686 610 707 617 746Z"/>
-    <path d="M638 710 C670 695 695 671 708 643 C678 648 653 671 638 710Z"/>
-    <path d="M657 668 C628 651 609 625 601 596 C630 608 651 634 657 668Z"/>
-    <path d="M679 618 C706 600 725 575 733 547 C706 560 686 585 679 618Z"/>
-    <path d="M695 569 C671 548 657 521 656 493 C680 510 695 537 695 569Z"/>
-    <path d="M706 526 C728 507 742 481 744 454 C723 471 710 497 706 526Z"/>
-    <path d="M592 782 C566 769 541 767 518 773 C537 791 564 798 592 782Z"/>
+    <path d="M595 830 C637 773 682 708 710 633 C727 586 739 535 740 478"/>
+    <path d="M630 780 C596 765 570 738 556 705 C592 716 620 741 630 780Z"/>
+    <path d="M657 737 C694 720 723 693 739 661 C702 668 673 694 657 737Z"/>
+    <path d="M678 691 C647 672 625 644 616 610 C650 625 672 653 678 691Z"/>
+    <path d="M702 638 C732 618 753 588 762 557 C731 572 709 601 702 638Z"/>
+    <path d="M722 582 C696 560 680 529 679 497 C705 516 721 547 722 582Z"/>
+    <path d="M735 533 C760 511 777 482 780 451 C756 470 740 500 735 533Z"/>
+    <path d="M602 816 C573 800 544 797 518 804 C540 826 571 833 602 816Z"/>
   </g>
 </svg>
