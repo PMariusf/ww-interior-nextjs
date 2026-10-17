@@ -25,3 +25,6 @@ yarn-error.log*
 # Hosting tools
 .vercel
 .wrangler
+
+# Local Sites and package-manager runtime cache
+/.sites-runtime/
