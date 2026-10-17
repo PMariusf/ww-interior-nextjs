@@ -120,6 +120,18 @@ export default function Home() {
           src="/images/hytte-soverom.jpg"
         />
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#241d28]/75 via-[#241d28]/40 to-[#241d28]/5" />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute right-[8vw] top-1/2 z-0 hidden -translate-y-1/2 items-center justify-center rounded-full bg-paper/90 p-5 shadow-2xl xl:flex"
+        >
+          <Image
+            alt=""
+            className="size-[clamp(220px,22vw,330px)]"
+            height={1000}
+            src="/images/ww-interior-logo.svg"
+            width={1000}
+          />
+        </div>
         <div className="max-w-2xl text-white">
           <p className="eyebrow text-white/85">
             Interiørdesign · styling · møbelfornying
