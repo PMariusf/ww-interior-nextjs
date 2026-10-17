@@ -158,6 +158,17 @@ export default function Home() {
         </div>
       </section>
 
+      <section aria-label="WW Interior" className="bg-[#a2a38e] px-7 py-12 sm:py-16">
+        <Image
+          alt="WW Interior-logo i elfenbenshvitt med bladmotiv på salviegrønn bakgrunn"
+          className="mx-auto h-auto w-full max-w-[480px]"
+          height={1000}
+          sizes="(max-width: 640px) 88vw, 480px"
+          src="/images/ww-interior-brand-section.svg"
+          width={1000}
+        />
+      </section>
+
       <section className="px-7 py-24 sm:px-12 sm:py-32 lg:px-[12vw]" id="om">
         <p className="eyebrow text-olive">En personlig tilnærming</p>
         <div className="mt-7 grid gap-8 md:grid-cols-[1.1fr_.9fr] md:items-end md:gap-20">
