@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" role="img" aria-labelledby="title desc">
+  <title id="title">WW Interior — Wenche Wie</title>
+  <desc id="desc">Round plum logo with an overlapping WW monogram and a botanical branch.</desc>
+  <defs>
+    <path id="top-arc" d="M 190 500 A 310 310 0 0 1 810 500"/>
+    <path id="bottom-arc" d="M 190 500 A 310 310 0 0 0 810 500"/>
+    <style>
+      .ring-text { fill: #f4f0e8; font-family: Georgia, 'Times New Roman', serif; font-size: 39px; letter-spacing: 8px; }
+      .brand { fill: #f4f0e8; font-family: Georgia, 'Times New Roman', serif; }
+      .botanical { fill: none; stroke: #f4f0e8; stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; opacity: .92; }
+    </style>
+  </defs>
+  <circle cx="500" cy="500" r="485" fill="#292737"/>
+  <circle cx="500" cy="500" r="472" fill="none" stroke="#aaa4a0" stroke-width="1.5" opacity=".42"/>
+  <text class="ring-text" text-anchor="middle"><textPath href="#top-arc" startOffset="50%">WW INTERIOR</textPath></text>
+  <text class="ring-text" text-anchor="middle" font-size="34" letter-spacing="7" transform="rotate(180 500 500)"><textPath href="#bottom-arc" startOffset="50%">WENCHE WIE</textPath></text>
+  <g class="brand" text-anchor="middle">
+    <text x="475" y="620" font-size="205" font-weight="400" letter-spacing="-22">W</text>
+    <text x="565" y="685" font-size="205" font-weight="400" letter-spacing="-22">W</text>
+  </g>
+  <g class="botanical">
+    <path d="M585 795 C626 738 666 682 690 615 C705 573 714 526 715 478"/>
+    <path d="M617 746 C587 730 566 705 554 677 C585 686 610 707 617 746Z"/>
+    <path d="M638 710 C670 695 695 671 708 643 C678 648 653 671 638 710Z"/>
+    <path d="M657 668 C628 651 609 625 601 596 C630 608 651 634 657 668Z"/>
+    <path d="M679 618 C706 600 725 575 733 547 C706 560 686 585 679 618Z"/>
+    <path d="M695 569 C671 548 657 521 656 493 C680 510 695 537 695 569Z"/>
+    <path d="M706 526 C728 507 742 481 744 454 C723 471 710 497 706 526Z"/>
+    <path d="M592 782 C566 769 541 767 518 773 C537 791 564 798 592 782Z"/>
+  </g>
+</svg>
