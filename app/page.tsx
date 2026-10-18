@@ -186,9 +186,9 @@ export default function Home() {
       <section className="px-7 pb-24 sm:px-12 sm:pb-32 lg:px-[12vw]" id="tjenester">
         <div className="mb-10 flex items-end justify-between gap-6">
           <div>
-            <p className="eyebrow text-olive">Fra idé til fornyelse</p>
+            <p className="eyebrow text-olive">Et lite utvalg fra arbeidet</p>
             <h2 className="mt-4 font-display text-4xl leading-tight tracking-[-0.04em] sm:text-5xl">
-              Tjenester med <em className="font-normal">omtanke</em>
+              Utvalgte <em className="font-normal">arbeider</em>
             </h2>
           </div>
           <a
