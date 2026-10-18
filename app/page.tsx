@@ -45,22 +45,22 @@ const ideas = [
   },
 ];
 
-function Brand() {
+function Brand({ large = false }: { large?: boolean }) {
   return (
     <a
       aria-label="WW Interior – til toppen"
-      className="inline-flex items-center gap-3"
+      className={`inline-flex items-center ${large ? "gap-3.5" : "gap-3"}`}
       href="#hjem"
     >
       <Image
         alt=""
         aria-hidden="true"
-        className="size-12 rounded-full"
+        className={`${large ? "size-14" : "size-12"} rounded-full`}
         height={48}
         src="/images/logo-black.png"
         width={48}
       />
-      <span className="text-[10px] font-medium tracking-[0.24em] text-ink">
+      <span className={`${large ? "text-xs" : "text-[10px]"} font-medium tracking-[0.24em] text-ink`}>
         WW INTERIOR
       </span>
     </a>
@@ -106,7 +106,7 @@ export default function Home() {
   return (
     <main id="hjem" className="overflow-hidden bg-paper text-ink">
       <header className="relative z-10 flex h-[82px] items-center justify-between px-6 sm:px-10 lg:px-[7vw]">
-        <Brand />
+        <Brand large />
         <Navigation />
       </header>
 
@@ -140,7 +140,7 @@ export default function Home() {
             Utforsk tjenestene <span aria-hidden="true">↘</span>
           </a>
         </div>
-        <div className="absolute bottom-7 left-7 right-7 flex justify-between text-[9px] uppercase tracking-[0.16em] text-white/90 sm:left-12 sm:right-12 lg:left-[7vw] lg:right-[7vw]">
+        <div className="absolute bottom-7 left-7 right-7 flex justify-between text-[11px] uppercase tracking-[0.16em] text-white/90 sm:text-xs sm:left-12 sm:right-12 lg:left-[7vw] lg:right-[7vw]">
           <span>WW Interior · Bergen</span>
           <span>Interiør med fokus på gjenbruk</span>
         </div>
@@ -149,9 +149,9 @@ export default function Home() {
       <section aria-label="WW Interior" className="bg-[#9fa28d] px-7 py-8 sm:py-10">
         <Image
           alt="WW Interior-logo i elfenbenshvitt med bladmotiv på brun bakgrunn"
-          className="mx-auto block h-auto w-full sm:w-[85%] lg:w-2/3"
+          className="mx-auto block h-auto w-2/3 sm:w-1/2 lg:w-1/3"
           height={1000}
-          sizes="calc(100vw - 3.5rem), 80vw, 67vw"
+          sizes="(max-width: 640px) 67vw, (max-width: 1024px) 50vw, 33vw"
           src="/images/logo-hero-brown.png"
           width={1000}
         />
