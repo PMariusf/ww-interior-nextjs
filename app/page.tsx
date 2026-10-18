@@ -159,26 +159,37 @@ export default function Home() {
 
       <section className="px-7 py-24 sm:px-12 sm:py-32 lg:px-[12vw]" id="om">
         <p className="eyebrow text-olive">En personlig tilnærming</p>
-        <div className="mt-7 grid gap-8 md:grid-cols-[1.1fr_.9fr] md:items-end md:gap-20">
-          <h2 className="font-display text-5xl leading-[1.05] tracking-[-0.045em] sm:text-6xl lg:text-7xl">
-            Forny med
-            <br />
-            <em className="font-normal">personlighet.</em>
-          </h2>
-          <div className="max-w-lg">
-            <p className="text-sm leading-7 text-muted">
-              Wenche-Johanne Føynar Wie står bak WW Interior i Bergen. Hun
-              arbeider med interiørdesign, styling, interiørsøm og møbelfornying
-              — med gjenbruk og bærekraft som en rød tråd.
-            </p>
-            <a
-              className="text-link mt-6"
-              href="https://www.instagram.com/ww_interior/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              Se mer på Instagram <span aria-hidden="true">↗</span>
-            </a>
+        <div className="mt-7 grid gap-8 md:grid-cols-2 md:items-center md:gap-16">
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden bg-[#e9e5dc]">
+            <Image
+              alt="Wenche-Johanne Føynar Wie, som står bak WW Interior"
+              className="object-cover object-center"
+              fill
+              sizes="(max-width: 768px) 90vw, 42vw"
+              src="/images/wenche-max.png"
+            />
+          </div>
+          <div>
+            <h2 className="font-display text-5xl leading-[1.05] tracking-[-0.045em] sm:text-6xl lg:text-7xl">
+              Forny med
+              <br />
+              <em className="font-normal">personlighet.</em>
+            </h2>
+            <div className="mt-7 max-w-lg">
+              <p className="text-sm leading-7 text-muted">
+                Wenche-Johanne Føynar Wie står bak WW Interior i Bergen. Hun
+                arbeider med interiørdesign, styling, interiørsøm og møbelfornying
+                — med gjenbruk og bærekraft som en rød tråd.
+              </p>
+              <a
+                className="text-link mt-6"
+                href="https://www.instagram.com/ww_interior/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Se mer på Instagram <span aria-hidden="true">↗</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
