@@ -120,18 +120,6 @@ export default function Home() {
           src="/images/hytte-soverom.jpg"
         />
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#241d28]/75 via-[#241d28]/40 to-[#241d28]/5" />
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute right-[8vw] top-1/2 z-0 hidden -translate-y-1/2 items-center justify-center rounded-full bg-paper/90 p-5 shadow-2xl xl:flex"
-        >
-          <Image
-            alt=""
-            className="size-[clamp(220px,22vw,330px)]"
-            height={1000}
-            src="/images/ww-interior-logo.svg"
-            width={1000}
-          />
-        </div>
         <div className="max-w-2xl text-white">
           <p className="eyebrow text-white/85">
             Interiørdesign · styling · møbelfornying
@@ -158,12 +146,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section aria-label="WW Interior" className="bg-[#a2a38e] px-7 py-12 sm:py-16">
+      <section aria-label="WW Interior" className="overflow-hidden">
         <Image
-          alt="WW Interior-logo i elfenbenshvitt med bladmotiv på salviegrønn bakgrunn"
-          className="mx-auto h-auto w-full max-w-[480px]"
+          alt="WW Interior-logo i elfenbenshvitt med bladmotiv på brun bakgrunn"
+          className="block h-auto w-full"
           height={1000}
-          sizes="(max-width: 640px) 88vw, 480px"
+          sizes="100vw"
           src="/images/logo-hero-brown.png"
           width={1000}
         />
