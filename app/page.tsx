@@ -146,7 +146,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section aria-label="WW Interior" className="bg-[#a2a38e] px-7 py-8 sm:py-10">
+      <section aria-label="WW Interior" className="bg-[#9fa28d] px-7 py-8 sm:py-10">
         <Image
           alt="WW Interior-logo i elfenbenshvitt med bladmotiv på brun bakgrunn"
           className="mx-auto block h-auto w-2/3 sm:w-1/2 lg:w-1/3"
