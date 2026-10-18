@@ -56,9 +56,9 @@ function Brand({ large = false }: { large?: boolean }) {
         alt=""
         aria-hidden="true"
         className={`${large ? "size-14" : "size-12"} rounded-full`}
-        height={48}
+        height={large ? 56 : 48}
         src="/images/logo-black.png"
-        width={48}
+        width={large ? 56 : 48}
       />
       <span className={`${large ? "text-xs" : "text-[10px]"} font-medium tracking-[0.24em] text-ink`}>
         WW INTERIOR
