@@ -149,9 +149,9 @@ export default function Home() {
       <section aria-label="WW Interior" className="bg-[#9fa28d] px-7 py-8 sm:py-10">
         <Image
           alt="WW Interior-logo i elfenbenshvitt med bladmotiv på brun bakgrunn"
-          className="mx-auto block h-auto w-2/3 sm:w-1/2 lg:w-1/3"
+          className="mx-auto block h-auto w-full sm:w-[85%] lg:w-2/3"
           height={1000}
-          sizes="(max-width: 640px) 67vw, (max-width: 1024px) 50vw, 33vw"
+          sizes="calc(100vw - 3.5rem), 80vw, 67vw"
           src="/images/logo-hero-brown.png"
           width={1000}
         />
