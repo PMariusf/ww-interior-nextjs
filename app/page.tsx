@@ -49,19 +49,22 @@ function Brand({ large = false }: { large?: boolean }) {
   return (
     <a
       aria-label="WW Interior – til toppen"
-      className={`inline-flex items-center ${large ? "gap-3.5" : "gap-3"}`}
+      className={`inline-flex items-center ${large ? "gap-3" : "gap-2.5"}`}
       href="#hjem"
     >
       <Image
         alt=""
         aria-hidden="true"
-        className={`${large ? "size-14" : "size-12"} rounded-full`}
-        height={large ? 56 : 48}
-        src="/images/logo-black.png"
-        width={large ? 56 : 48}
+        className={large ? "size-[68px] sm:size-[76px]" : "size-12"}
+        height={large ? 76 : 48}
+        src="/images/ww-interior-logo.svg"
+        width={large ? 76 : 48}
       />
-      <span className={`${large ? "text-xs" : "text-[10px]"} font-medium tracking-[0.24em] text-ink`}>
-        WW INTERIOR
+      <span className="flex flex-col text-ink">
+        <span className={`${large ? "text-[13px] sm:text-sm" : "text-xs"} font-medium tracking-[0.18em]`}>
+          WW INTERIOR
+        </span>
+        {large && <span className="mt-1 hidden text-[9px] uppercase tracking-[0.21em] text-muted sm:block">Wenche Wie · Bergen</span>}
       </span>
     </a>
   );
@@ -70,7 +73,7 @@ function Brand({ large = false }: { large?: boolean }) {
 function Navigation() {
   return (
     <>
-      <nav aria-label="Hovedmeny" className="hidden items-center gap-9 md:flex">
+      <nav aria-label="Hovedmeny" className="hidden items-center gap-7 lg:gap-10 md:flex">
         <a className="nav-link" href="#tjenester">
           Tjenester
         </a>
@@ -80,17 +83,17 @@ function Navigation() {
         <a className="nav-link" href="#inspirasjon">
           Inspirasjon
         </a>
-        <a className="border-b border-ink pb-2 text-xs" href="#kontakt">
-          Ta kontakt <span aria-hidden="true" className="ml-2">↗</span>
+        <a className="nav-contact" href="#kontakt">
+          Ta kontakt <span aria-hidden="true">↗</span>
         </a>
       </nav>
       <details className="group relative md:hidden">
-        <summary className="cursor-pointer list-none rounded-full border border-line px-4 py-2 text-xs marker:hidden focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-plum">
-          Meny <span aria-hidden="true" className="ml-2">＋</span>
+        <summary className="flex min-h-11 cursor-pointer list-none items-center gap-3 border-b border-ink px-1 text-xs uppercase tracking-[0.15em] marker:hidden focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-plum">
+          Meny <span aria-hidden="true" className="text-lg leading-none group-open:rotate-45">＋</span>
         </summary>
         <nav
           aria-label="Mobilmeny"
-          className="absolute right-0 top-12 z-20 flex w-52 flex-col gap-5 border border-line bg-paper p-5 shadow-xl"
+          className="absolute right-0 top-14 z-20 flex w-56 flex-col gap-5 border border-line bg-paper p-6 shadow-xl"
         >
           <a className="nav-link" href="#tjenester">Tjenester</a>
           <a className="nav-link" href="#om">Om WW</a>
@@ -105,91 +108,94 @@ function Navigation() {
 export default function Home() {
   return (
     <main id="hjem" className="overflow-hidden bg-paper text-ink">
-      <header className="relative z-10 flex h-[82px] items-center justify-between px-6 sm:px-10 lg:px-[7vw]">
+      <a className="skip-link" href="#innhold">Hopp til innhold</a>
+      <header className="relative z-10 flex h-[86px] items-center justify-between border-b border-line/70 px-5 sm:h-[96px] sm:px-10 lg:px-[7vw]">
         <Brand large />
         <Navigation />
       </header>
 
-      <section className="relative isolate flex min-h-[650px] items-center px-7 py-24 sm:px-12 lg:min-h-[min(760px,calc(100svh-82px))] lg:px-[11vw]">
-        <Image
-          alt="Hytteinteriør med blå seng og spesialbygde skuffer"
-          className="-z-20 object-cover object-center"
-          fill
-          priority
-          sizes="100vw"
-          src="/images/hytte-soverom.jpg"
-        />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#241d28]/75 via-[#241d28]/40 to-[#241d28]/5" />
-        <div className="max-w-2xl text-white">
-          <p className="eyebrow text-white/85">
-            Interiørdesign · styling · møbelfornying
-          </p>
-          <h1 className="mt-6 font-display text-6xl leading-[0.98] tracking-[-0.055em] sm:text-7xl lg:text-[6.6rem]">
-            Nytt liv til
-            <br />
-            <em className="font-normal">rom og møbler.</em>
+      <section className="hero-shell" id="innhold" aria-labelledby="hero-title">
+        <div className="hero-copy">
+          <p className="eyebrow text-olive">Interiørdesign · styling · møbelfornying</p>
+          <h1 className="hero-title" id="hero-title">
+            Nytt liv til<br />
+            <em>rom og møbler.</em>
           </h1>
-          <p className="mt-7 max-w-md text-sm leading-7 text-white/90 sm:text-base">
+          <p className="hero-description">
             Personlige interiører med omtanke for historien i tingene — og for
             ressursene vi allerede har.
           </p>
-          <a
-            className="mt-9 inline-flex items-center gap-8 bg-paper px-5 py-4 text-xs text-ink transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
-            href="#tjenester"
-          >
-            Utforsk tjenestene <span aria-hidden="true">↘</span>
+          <a className="editorial-link" href="#tjenester">
+            Utforsk tjenestene <span aria-hidden="true">↗</span>
           </a>
+          <div className="hero-meta" aria-label="WW Interior i Bergen">
+            <span>WW Interior · Bergen</span>
+            <span>Interiør med fokus på gjenbruk</span>
+          </div>
         </div>
-        <div className="absolute bottom-7 left-7 right-7 flex justify-between text-[11px] uppercase tracking-[0.16em] text-white/90 sm:text-xs sm:left-12 sm:right-12 lg:left-[7vw] lg:right-[7vw]">
-          <span>WW Interior · Bergen</span>
-          <span>Interiør med fokus på gjenbruk</span>
+        <div className="hero-visual">
+          <div className="hero-image-wrap">
+            <Image
+              alt="Hytteinteriør med blå seng og spesialbygde skuffer"
+              className="object-cover object-center"
+              fill
+              priority
+              sizes="(max-width: 767px) 100vw, 52vw"
+              src="/images/hytte-soverom.jpg"
+            />
+          </div>
         </div>
       </section>
 
-      <section aria-label="WW Interior" className="bg-[#9fa28d] px-7 py-8 sm:py-10">
+      <section aria-label="WW Interior" className="intro-note">
+        <p className="eyebrow text-olive">Et hjem skal føles som ditt</p>
+        <p className="font-display text-2xl leading-snug tracking-[-0.025em] sm:text-3xl">
+          Interiør med personlighet, <em>skapt for å vare.</em>
+        </p>
         <Image
-          alt="WW Interior-logo i elfenbenshvitt med bladmotiv på brun bakgrunn"
-          className="mx-auto block h-auto w-2/3 sm:w-1/2 lg:w-1/3"
+          alt="WW Interior-logo med bladmotiv"
+          className="intro-signature"
           height={1000}
-          sizes="(max-width: 640px) 67vw, (max-width: 1024px) 50vw, 33vw"
+          sizes="80px"
           src="/images/logo-hero-brown.png"
           width={1000}
         />
       </section>
 
-      <section className="px-7 py-24 sm:px-12 sm:py-32 lg:px-[12vw]" id="om">
-        <p className="eyebrow text-olive">En personlig tilnærming</p>
-        <div className="mt-7 grid gap-8 md:grid-cols-2 md:items-center md:gap-16">
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden bg-[#e9e5dc]">
+      <section className="about-section" id="om">
+        <div className="about-visual">
+          <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#e9e5dc]">
             <Image
               alt="Wenche-Johanne Føynar Wie, som står bak WW Interior"
               className="object-cover object-center"
               fill
-              sizes="(max-width: 768px) 90vw, 42vw"
+              sizes="(max-width: 767px) 90vw, 40vw"
               src="/images/wenche-max.png"
             />
           </div>
-          <div>
-            <h2 className="font-display text-5xl leading-[1.05] tracking-[-0.045em] sm:text-6xl lg:text-7xl">
-              Forny med
-              <br />
-              <em className="font-normal">personlighet.</em>
-            </h2>
-            <div className="mt-7 max-w-lg">
-              <p className="text-sm leading-7 text-muted">
-                Wenche-Johanne Føynar Wie står bak WW Interior i Bergen. Hun
-                arbeider med interiørdesign, styling, interiørsøm og møbelfornying
-                — med gjenbruk og bærekraft som en rød tråd.
-              </p>
-              <a
-                className="text-link mt-6"
-                href="https://www.instagram.com/ww_interior/"
-                rel="noreferrer"
-                target="_blank"
-              >
-                Se mer på Instagram <span aria-hidden="true">↗</span>
-              </a>
-            </div>
+          <span className="mt-3 block text-[10px] uppercase tracking-[0.16em] text-muted">Wenche-Johanne Føynar Wie · WW Interior</span>
+        </div>
+        <div className="about-copy">
+          <p className="eyebrow text-olive">En personlig tilnærming</p>
+          <h2 className="mt-6 font-display text-5xl leading-[1.05] tracking-[-0.045em] sm:text-6xl lg:text-7xl">
+            Forny med
+            <br />
+            <em className="font-normal">personlighet.</em>
+          </h2>
+          <div className="mt-7 max-w-lg border-l border-[#b9aa9a] pl-5 sm:pl-7">
+            <p className="text-sm leading-7 text-muted sm:text-base sm:leading-8">
+              Wenche-Johanne Føynar Wie står bak WW Interior i Bergen. Hun
+              arbeider med interiørdesign, styling, interiørsøm og møbelfornying
+              — med gjenbruk og bærekraft som en rød tråd.
+            </p>
+            <a
+              className="text-link mt-6"
+              href="https://www.instagram.com/ww_interior/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Se mer på Instagram <span aria-hidden="true">↗</span>
+            </a>
           </div>
         </div>
       </section>

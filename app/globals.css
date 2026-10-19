@@ -3,11 +3,11 @@
 @import "../vendor/shadcn-tailwind-4.13.0.css";
 
 @theme inline {
-  --color-paper: #f5f2ed;
-  --color-ink: #292721;
-  --color-muted: #79766f;
-  --color-line: #d9d5cd;
-  --color-olive: #777766;
+  --color-paper: #f7f3ed;
+  --color-ink: #332d29;
+  --color-muted: #6f6962;
+  --color-line: #ded6cc;
+  --color-olive: #746f5c;
   --color-plum: #4c4052;
   --font-display: Georgia, "Times New Roman", serif;
   --font-sans: Arial, Helvetica, sans-serif;
@@ -26,8 +26,22 @@ body {
 }
 
 ::selection {
-  background: #d9cdda;
-  color: #292721;
+  background: #d9c8b8;
+  color: #332d29;
+}
+
+.skip-link {
+  position: absolute;
+  z-index: 50;
+  top: -4rem;
+  left: 1rem;
+  background: var(--color-ink);
+  color: white;
+  padding: 0.75rem 1rem;
+}
+
+.skip-link:focus {
+  top: 1rem;
 }
 
 .eyebrow {
@@ -39,12 +53,192 @@ body {
 }
 
 .nav-link {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   transition: opacity 160ms ease;
 }
 
 .nav-link:hover {
   opacity: 0.65;
+}
+
+.nav-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+  border-bottom: 1px solid var(--color-ink);
+  padding: 0.7rem 0;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: gap 180ms ease;
+}
+
+.nav-contact:hover {
+  gap: 1.8rem;
+}
+
+.hero-shell {
+  display: grid;
+  background: #eee8df;
+}
+
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 4.5rem max(1.75rem, 7vw) 3rem;
+}
+
+.hero-title {
+  margin-top: 1.7rem;
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 6.4vw, 7.5rem);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.065em;
+}
+
+.hero-title em,
+.intro-note em {
+  font-weight: 400;
+}
+
+.hero-description {
+  max-width: 26rem;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--color-muted);
+}
+
+.editorial-link {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-top: 2rem;
+  border-bottom: 1px solid var(--color-ink);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: gap 180ms ease;
+}
+
+.editorial-link:hover {
+  gap: 3.5rem;
+}
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin-top: 4rem;
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.hero-visual {
+  min-width: 0;
+  background: #c3b19d;
+}
+
+.hero-image-wrap {
+  position: relative;
+  min-height: 28rem;
+  height: 100%;
+  overflow: hidden;
+}
+
+.intro-note {
+  display: grid;
+  align-items: center;
+  gap: 1rem 2rem;
+  padding: 2.5rem max(1.75rem, 7vw);
+  border-bottom: 1px solid var(--color-line);
+  background: var(--color-paper);
+}
+
+.intro-signature {
+  display: block;
+  width: 4.5rem;
+  height: 4.5rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.about-section {
+  display: grid;
+  gap: 3.5rem;
+  align-items: center;
+  padding: 6rem max(1.75rem, 10vw) 7rem;
+}
+
+.about-visual {
+  max-width: 34rem;
+}
+
+.about-copy {
+  max-width: 39rem;
+}
+
+@media (min-width: 768px) {
+  .hero-shell {
+    grid-template-columns: minmax(0, 48%) minmax(0, 52%);
+    min-height: min(760px, calc(100svh - 96px));
+  }
+
+  .hero-copy {
+    padding-top: 5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .hero-image-wrap {
+    min-height: 38rem;
+  }
+
+  .intro-note {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) auto;
+  }
+
+  .about-section {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: clamp(3rem, 8vw, 9rem);
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-visual {
+    order: -1;
+  }
+
+  .hero-image-wrap {
+    min-height: 0;
+    aspect-ratio: 5 / 4;
+  }
+
+  .hero-copy {
+    padding-top: 3.5rem;
+  }
+
+  .hero-title {
+    font-size: clamp(3.1rem, 12vw, 5.5rem);
+  }
+
+  .hero-meta {
+    margin-top: 3rem;
+  }
+
+  .about-section {
+    padding-top: 4.5rem;
+    padding-bottom: 5rem;
+  }
 }
 
 .text-link {
