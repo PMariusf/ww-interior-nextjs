@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Brand } from "@/components/brand";
 
 const services = [
   {
@@ -45,31 +46,6 @@ const ideas = [
   },
 ];
 
-function Brand({ large = false }: { large?: boolean }) {
-  return (
-    <a
-      aria-label="WW Interior – til toppen"
-      className={`inline-flex items-center ${large ? "gap-3" : "gap-2.5"}`}
-      href="#hjem"
-    >
-      <Image
-        alt=""
-        aria-hidden="true"
-        className={large ? "size-[68px] sm:size-[76px]" : "size-12"}
-        height={large ? 76 : 48}
-        src="/images/ww-interior-logo.svg"
-        width={large ? 76 : 48}
-      />
-      <span className="flex flex-col text-ink">
-        <span className={`${large ? "text-[13px] sm:text-sm" : "text-xs"} font-medium tracking-[0.18em]`}>
-          WW INTERIOR
-        </span>
-        {large && <span className="mt-1 hidden text-[9px] uppercase tracking-[0.21em] text-muted sm:block">Wenche Wie · Bergen</span>}
-      </span>
-    </a>
-  );
-}
-
 function Navigation() {
   return (
     <>
@@ -80,11 +56,11 @@ function Navigation() {
         <a className="nav-link" href="#om">
           Om WW
         </a>
-        <a className="nav-link" href="#inspirasjon">
-          Inspirasjon
+        <a className="nav-link" href="/presentasjon-og-bestilling">
+          Presentasjon
         </a>
-        <a className="nav-contact" href="#kontakt">
-          Ta kontakt <span aria-hidden="true">↗</span>
+        <a className="nav-contact" href="/presentasjon-og-bestilling#bestilling">
+          Bestilling <span aria-hidden="true">↗</span>
         </a>
       </nav>
       <details className="group relative md:hidden">
@@ -97,8 +73,8 @@ function Navigation() {
         >
           <a className="nav-link" href="#tjenester">Tjenester</a>
           <a className="nav-link" href="#om">Om WW</a>
-          <a className="nav-link" href="#inspirasjon">Inspirasjon</a>
-          <a className="nav-link" href="#kontakt">Ta kontakt ↗</a>
+          <a className="nav-link" href="/presentasjon-og-bestilling">Presentasjon</a>
+          <a className="nav-link" href="/presentasjon-og-bestilling#bestilling">Bestilling ↗</a>
         </nav>
       </details>
     </>
@@ -136,12 +112,12 @@ export default function Home() {
         <div className="hero-visual">
           <div className="hero-image-wrap">
             <Image
-              alt="Hytteinteriør med blå seng og spesialbygde skuffer"
+              alt="Lyst kjøkken med spesialtilpassede skap og spiseplass"
               className="object-cover object-center"
               fill
               priority
               sizes="(max-width: 767px) 100vw, 52vw"
-              src="/images/hytte-soverom.jpg"
+              src="/images/presentasjon-kjokken.png"
             />
           </div>
         </div>
@@ -152,14 +128,16 @@ export default function Home() {
         <p className="font-display text-2xl leading-snug tracking-[-0.025em] sm:text-3xl">
           Interiør med personlighet, <em>skapt for å vare.</em>
         </p>
-        <Image
-          alt="WW Interior-logo med bladmotiv"
-          className="intro-signature"
-          height={1000}
-          sizes="80px"
-          src="/images/logo-hero-brown.png"
-          width={1000}
-        />
+        <span className="intro-signature">
+          <Image
+            alt="WW Interior-logo med bladmotiv"
+            className="intro-signature-image"
+            height={434}
+            sizes="80px"
+            src="/images/presentasjon-logo.png"
+            width={422}
+          />
+        </span>
       </section>
 
       <section className="about-section" id="om">
@@ -196,6 +174,24 @@ export default function Home() {
             >
               Se mer på Instagram <span aria-hidden="true">↗</span>
             </a>
+          </div>
+          <div className="about-thumbnails" aria-label="Interiør og materialer">
+            <Image
+              alt="Hytteinteriør med blå seng og spesialbygde skuffer"
+              className="about-thumbnail"
+              height={640}
+              sizes="(max-width: 640px) 38vw, 150px"
+              src="/images/hytte-soverom.jpg"
+              width={640}
+            />
+            <Image
+              alt="Materialpalett med tekstiler i dempede blå og beige toner"
+              className="about-thumbnail"
+              height={714}
+              sizes="(max-width: 640px) 38vw, 150px"
+              src="/images/presentasjon-materialer.png"
+              width={652}
+            />
           </div>
         </div>
       </section>
@@ -301,11 +297,9 @@ export default function Home() {
           </p>
           <a
             className="mt-6 inline-flex items-center gap-8 bg-paper px-5 py-4 text-xs text-ink transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
-            href="https://www.instagram.com/ww_interior/"
-            rel="noreferrer"
-            target="_blank"
+            href="/presentasjon-og-bestilling#bestilling"
           >
-            Ta kontakt på Instagram <span aria-hidden="true">↗</span>
+            Send en forespørsel <span aria-hidden="true">↗</span>
           </a>
           <a
             className="mt-5 block text-xs text-white/85 underline decoration-white/40 underline-offset-4"

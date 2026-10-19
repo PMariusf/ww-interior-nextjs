@@ -169,8 +169,17 @@ body {
   display: block;
   width: 4.5rem;
   height: 4.5rem;
-  object-fit: cover;
+  overflow: hidden;
   border-radius: 50%;
+  background: #9fa28d;
+}
+
+.intro-signature-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.55);
 }
 
 .about-section {
@@ -186,6 +195,18 @@ body {
 
 .about-copy {
   max-width: 39rem;
+}
+
+.about-thumbnails {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 2.75rem;
+}
+
+.about-thumbnail {
+  width: clamp(6.5rem, 18vw, 9rem);
+  height: clamp(6.5rem, 18vw, 9rem);
+  object-fit: cover;
 }
 
 @media (min-width: 768px) {
@@ -253,6 +274,149 @@ body {
 
 .text-link:hover {
   opacity: 0.65;
+}
+
+.booking-hero {
+  display: grid;
+  background: #eee8df;
+}
+
+.booking-hero-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5rem max(1.75rem, 8vw);
+}
+
+.booking-hero-image {
+  position: relative;
+  min-height: 38rem;
+  background: #d9cbbc;
+}
+
+.booking-intro {
+  display: grid;
+  gap: 2rem 4rem;
+  padding: 6rem max(1.75rem, 12vw);
+  border-bottom: 1px solid var(--color-line);
+}
+
+.service-row {
+  display: grid;
+  gap: 0.8rem 2rem;
+  align-items: start;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.package-row {
+  padding: 2rem 0 2.5rem;
+  border-top: 1px solid #cec3b6;
+}
+
+.booking-form {
+  align-self: start;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border: 1px solid var(--color-line);
+  background: #f3eee7;
+}
+
+.booking-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  min-width: 0;
+  font-size: 0.7rem;
+  letter-spacing: 0.07em;
+}
+
+.booking-field input,
+.booking-field select,
+.booking-field textarea {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid #c9bfb3;
+  border-radius: 0;
+  padding: 0.85rem 0.9rem;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font: inherit;
+  font-size: 0.875rem;
+  letter-spacing: normal;
+}
+
+.booking-field textarea {
+  resize: vertical;
+}
+
+.booking-field input:focus-visible,
+.booking-field select:focus-visible,
+.booking-field textarea:focus-visible,
+.booking-submit:focus-visible {
+  outline: 2px solid var(--color-plum);
+  outline-offset: 3px;
+}
+
+.booking-submit {
+  display: inline-flex;
+  min-height: 3.25rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0.9rem 1.15rem;
+  background: var(--color-ink);
+  color: white;
+  cursor: pointer;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: background 160ms ease;
+}
+
+.booking-submit:hover {
+  background: var(--color-plum);
+}
+
+@media (min-width: 768px) {
+  .booking-hero {
+    grid-template-columns: minmax(0, 58%) minmax(0, 42%);
+    min-height: 38rem;
+  }
+
+  .booking-intro {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  }
+
+  .service-row {
+    grid-template-columns: 3rem minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .booking-hero-image {
+    order: -1;
+    min-height: 0;
+    aspect-ratio: 5 / 4;
+  }
+
+  .booking-hero-copy {
+    padding-top: 4rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .booking-intro {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .service-row {
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+  }
+
+  .service-row p {
+    grid-column: 2;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
