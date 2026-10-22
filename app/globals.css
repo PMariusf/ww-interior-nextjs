@@ -167,19 +167,17 @@ body {
 
 .intro-signature {
   display: block;
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 5.5rem;
+  height: 5.5rem;
   overflow: hidden;
   border-radius: 50%;
-  background: #9fa28d;
 }
 
 .intro-signature-image {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transform: scale(1.55);
+  object-fit: contain;
 }
 
 .about-section {

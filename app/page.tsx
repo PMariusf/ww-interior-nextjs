@@ -132,10 +132,10 @@ export default function Home() {
           <Image
             alt="WW Interior-logo med bladmotiv"
             className="intro-signature-image"
-            height={434}
-            sizes="80px"
-            src="/images/presentasjon-logo.png"
-            width={422}
+            height={1254}
+            sizes="88px"
+            src="/images/logo-round-transparent-v2.png"
+            width={1254}
           />
         </span>
       </section>
