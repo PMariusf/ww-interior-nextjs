@@ -30,32 +30,34 @@ const ideas = [
     number: "01",
     title: "Gi møbler en ny start",
     description:
-      "Møbelfornying kan bevare det du liker og samtidig endre uttrykket rundt det.",
+      "Start med ett møbel. Nytt trekk, andre tekstiler eller en ny plassering kan endre hele romfølelsen.",
   },
   {
     number: "02",
     title: "Sy noe som passer",
     description:
-      "Interiørsøm gir tekstiler og mål en personlig løsning til hjemmet ditt.",
+      "Gardiner og puter kan binde sammen farger og materialer. Se etter tekstiler som både tåler bruk og gir rommet ro.",
   },
   {
     number: "03",
     title: "Innred med omtanke",
     description:
-      "Gjenbruk og bærekraft kan være en naturlig del av et vakkert hjem.",
+      "La favorittene dine få plass. Kombiner det du allerede eier med gjennomtenkte valg fremfor å bytte ut alt.",
   },
 ];
 
 function Navigation() {
   return (
     <>
-      <nav aria-label="Hovedmeny" className="hidden items-center gap-7 lg:gap-10 md:flex">
+      <nav aria-label="Hovedmeny" className="hidden items-center gap-7 lg:gap-7 lg:flex">
         <a className="nav-link" href="#tjenester">
           Tjenester
         </a>
         <a className="nav-link" href="#om">
-          Om WW
+          Om Wenche
         </a>
+        <a className="nav-link" href="#arbeider">Arbeider</a>
+        <a className="nav-link" href="#prosess">Prosess</a>
         <a className="nav-link" href="/presentasjon-og-bestilling">
           Presentasjon
         </a>
@@ -63,7 +65,7 @@ function Navigation() {
           Bestilling <span aria-hidden="true">↗</span>
         </a>
       </nav>
-      <details className="group relative md:hidden">
+      <details className="group relative lg:hidden">
         <summary className="flex min-h-11 cursor-pointer list-none items-center gap-3 border-b border-ink px-1 text-xs uppercase tracking-[0.15em] marker:hidden focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-plum">
           Meny <span aria-hidden="true" className="text-lg leading-none group-open:rotate-45">＋</span>
         </summary>
@@ -72,7 +74,10 @@ function Navigation() {
           className="absolute right-0 top-14 z-20 flex w-56 flex-col gap-5 border border-line bg-paper p-6 shadow-xl"
         >
           <a className="nav-link" href="#tjenester">Tjenester</a>
-          <a className="nav-link" href="#om">Om WW</a>
+          <a className="nav-link" href="#om">Om Wenche</a>
+          <a className="nav-link" href="#arbeider">Arbeider</a>
+          <a className="nav-link" href="#prosess">Slik jobber jeg</a>
+          <a className="nav-link" href="#inspirasjon">Inspirasjon</a>
           <a className="nav-link" href="/presentasjon-og-bestilling">Presentasjon</a>
           <a className="nav-link" href="/presentasjon-og-bestilling#bestilling">Bestilling ↗</a>
         </nav>
@@ -166,6 +171,7 @@ export default function Home() {
               arbeider med interiørdesign, styling, interiørsøm og møbelfornying
               — med gjenbruk og bærekraft som en rød tråd.
             </p>
+            <p className="mt-5 text-sm leading-7 text-muted">Målet er å ta vare på det som allerede fungerer, og gjøre bevisste endringer som kjennes personlige og varer over tid.</p>
             <a
               className="text-link mt-6"
               href="https://www.instagram.com/ww_interior/"
@@ -196,12 +202,61 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-7 pb-24 sm:px-12 sm:pb-32 lg:px-[12vw]" id="tjenester">
+      <section className="border-t border-line bg-[#f0ebe3] px-7 py-20 sm:px-12 sm:py-28 lg:px-[12vw]" id="tjenester" aria-labelledby="service-heading">
+        <div className="grid gap-7 md:grid-cols-[0.85fr_1.15fr] md:gap-16">
+          <div>
+            <p className="eyebrow text-olive">Hva kan WW Interior hjelpe deg med?</p>
+            <h2 id="service-heading" className="mt-4 font-display text-4xl leading-tight tracking-[-0.04em] sm:text-5xl">Små endringer. <em className="font-normal">Stor forskjell.</em></h2>
+            <p className="mt-5 max-w-sm text-sm leading-7 text-muted">Du trenger ikke fornye alt for å skape en helhet. Vi tar utgangspunkt i hjemmet ditt, det du allerede har, og det du ønsker å få til.</p>
+            <a className="editorial-link" href="/presentasjon-og-bestilling#bestilling">Spør om ditt prosjekt <span aria-hidden="true">↗</span></a>
+          </div>
+          <div className="border-t border-[#c9bfb3]">
+            {[
+              { name: "Interiørveiledning", description: "Råd om planløsning, møblering og uttrykk – tilpasset dine behov." },
+              { name: "Farger og materialer", description: "Skap en gjennomført helhet med farger, overflater og tekstiler som passer sammen." },
+              { name: "Styling og møblering", description: "Se rommene med nye øyne og finn plass til det som betyr noe for deg." },
+              { name: "Interiørsøm og møbelfornying", description: "Forny møbler og tekstiler med omtanke for kvalitet, funksjon og gjenbruk." },
+            ].map((service, index) => (
+              <article key={service.name} className="grid grid-cols-[2.5rem_1fr] gap-x-3 border-b border-[#c9bfb3] py-6 sm:grid-cols-[3rem_1fr]">
+                <span className="pt-1 text-xs text-olive">0{index + 1}</span>
+                <div>
+                  <h3 className="font-display text-2xl sm:text-3xl">{service.name}</h3>
+                  <p className="mt-2 max-w-lg text-sm leading-7 text-muted">{service.description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-7 py-20 sm:px-12 sm:py-28 lg:px-[12vw]" id="prosess" aria-labelledby="process-heading">
+        <div className="max-w-2xl">
+          <p className="eyebrow text-olive">Fra første samtale til et hjem som føles riktig</p>
+          <h2 id="process-heading" className="mt-4 font-display text-4xl tracking-[-0.04em] sm:text-5xl">Slik <em className="font-normal">jobber jeg.</em></h2>
+          <p className="mt-5 text-sm leading-7 text-muted">Vi begynner med det du trenger hjelp til, enten det er ett hjørne, et møbel eller et helt rom. Omfanget tilpasses oppdraget.</p>
+        </div>
+        <ol className="mt-12 grid gap-8 border-t border-line pt-8 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            { title: "Vi tar en prat", detail: "Du forteller om rommet, ønskene dine og hva du vil bevare." },
+            { title: "Vi finner retningen", detail: "Vi ser på farger, materialer, løsninger og et uttrykk som passer deg." },
+            { title: "Ideene blir konkrete", detail: "Du får forslag til tiltak og en plan for det vi avtaler å gjøre." },
+            { title: "Rommet får nytt liv", detail: "Vi følger opp løsningen i det omfanget prosjektet krever." },
+          ].map((step, index) => (
+            <li key={step.title}>
+              <span className="text-xs tracking-[0.16em] text-olive">0{index + 1} / 04</span>
+              <h3 className="mt-5 font-display text-2xl">{step.title}</h3>
+              <p className="mt-3 max-w-xs text-sm leading-7 text-muted">{step.detail}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section className="px-7 pb-24 sm:px-12 sm:pb-32 lg:px-[12vw]" id="arbeider">
         <div className="mb-10 flex items-end justify-between gap-6">
           <div>
-            <p className="eyebrow text-olive">Et lite utvalg fra arbeidet</p>
+            <p className="eyebrow text-olive">Inspirasjon fra eksisterende bilder</p>
             <h2 className="mt-4 font-display text-4xl leading-tight tracking-[-0.04em] sm:text-5xl">
-              Utvalgte <em className="font-normal">arbeider</em>
+              Et glimt av <em className="font-normal">arbeidet</em>
             </h2>
           </div>
           <a
@@ -213,6 +268,7 @@ export default function Home() {
             Se arbeidet på Instagram <span aria-hidden="true">↗</span>
           </a>
         </div>
+        <p className="mb-8 max-w-2xl text-sm leading-7 text-muted">Et lite innblikk i materialer, tekstiler og rom som viser WW Interiors stil. Flere bilder og prosjekter legges til etter hvert.</p>
         <div className="grid gap-x-7 gap-y-10 md:grid-cols-3">
           {services.map((service, index) => (
             <article className={index === 1 ? "md:mt-14" : ""} key={service.title}>
@@ -264,6 +320,7 @@ export default function Home() {
           <h2 className="mt-4 font-display text-4xl tracking-[-0.04em] sm:text-5xl">
             Hent litt <em className="font-normal">inspirasjon</em>
           </h2>
+          <p className="mt-5 max-w-xl text-sm leading-7 text-muted">Tre enkle steder å starte når du vil fornye hjemme uten å begynne helt på nytt.</p>
         </div>
         <div className="grid border-t border-line md:grid-cols-3">
           {ideas.map((idea, index) => (
