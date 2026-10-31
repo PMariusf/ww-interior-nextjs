@@ -30,26 +30,26 @@ const ideas = [
     number: "01",
     title: "Gi møbler en ny start",
     description:
-      "Møbelfornying kan bevare det du liker og samtidig endre uttrykket rundt det.",
+      "Start med ett møbel. Nytt trekk, andre tekstiler eller en ny plassering kan endre hele romfølelsen.",
   },
   {
     number: "02",
     title: "Sy noe som passer",
     description:
-      "Interiørsøm gir tekstiler og mål en personlig løsning til hjemmet ditt.",
+      "Gardiner og puter kan binde sammen farger og materialer. Se etter tekstiler som både tåler bruk og gir rommet ro.",
   },
   {
     number: "03",
     title: "Innred med omtanke",
     description:
-      "Gjenbruk og bærekraft kan være en naturlig del av et vakkert hjem.",
+      "La favorittene dine få plass. Kombiner det du allerede eier med gjennomtenkte valg fremfor å bytte ut alt.",
   },
 ];
 
 function Navigation() {
   return (
     <>
-      <nav aria-label="Hovedmeny" className="hidden items-center gap-7 lg:gap-10 md:flex">
+      <nav aria-label="Hovedmeny" className="hidden items-center gap-7 lg:gap-7 lg:flex">
         <a className="nav-link" href="#tjenester">
           Tjenester
         </a>
@@ -65,7 +65,7 @@ function Navigation() {
           Bestilling <span aria-hidden="true">↗</span>
         </a>
       </nav>
-      <details className="group relative md:hidden">
+      <details className="group relative lg:hidden">
         <summary className="flex min-h-11 cursor-pointer list-none items-center gap-3 border-b border-ink px-1 text-xs uppercase tracking-[0.15em] marker:hidden focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-plum">
           Meny <span aria-hidden="true" className="text-lg leading-none group-open:rotate-45">＋</span>
         </summary>
@@ -268,6 +268,7 @@ export default function Home() {
             Se arbeidet på Instagram <span aria-hidden="true">↗</span>
           </a>
         </div>
+        <p className="mb-8 max-w-2xl text-sm leading-7 text-muted">Et lite innblikk i materialer, tekstiler og rom som viser WW Interiors stil. Flere bilder og prosjekter legges til etter hvert.</p>
         <div className="grid gap-x-7 gap-y-10 md:grid-cols-3">
           {services.map((service, index) => (
             <article className={index === 1 ? "md:mt-14" : ""} key={service.title}>
@@ -319,6 +320,7 @@ export default function Home() {
           <h2 className="mt-4 font-display text-4xl tracking-[-0.04em] sm:text-5xl">
             Hent litt <em className="font-normal">inspirasjon</em>
           </h2>
+          <p className="mt-5 max-w-xl text-sm leading-7 text-muted">Tre enkle steder å starte når du vil fornye hjemme uten å begynne helt på nytt.</p>
         </div>
         <div className="grid border-t border-line md:grid-cols-3">
           {ideas.map((idea, index) => (
